@@ -162,9 +162,11 @@ def get_readable_message():
                 globals()['PAGE_NO'] -= 1
         for index, download in enumerate(list(download_dict.values())[COUNT:], start=1):
             if EMOJI_THEME is True:
+                msg += f"<b>Powered By @FourBitCloud </b>"
                 msg += f"<b>╭📁 Name:</b> <code>{escape(str(download.name()))}</code>"
                 msg += f"\n<b>├🤖 Status:</b> <i>{download.status()}</i>"
             else:
+                msg += f"<b>Powered By @FourBitCloud </b>"
                 msg += f"<b>╭ Name:</b> <code>{escape(str(download.name()))}</code>"
                 msg += f"\n<b>├ Status:</b> <i>{download.status()}</i>"
             if download.status() not in [MirrorStatus.STATUS_SEEDING, MirrorStatus.STATUS_SPLITTING]:
@@ -457,7 +459,6 @@ DISK: {progress_bar(disk)} {disk}%
 T: {disk_t}GB | F: {disk_f}GB
 Working For: {currentTime}
 T-DL: {recv} | T-UL: {sent}
-Made with ❤️ by Dipesh
 """
 
 
