@@ -404,7 +404,7 @@ class MirrorLeechListener:
                 log_m = f"\n<b>𝙇𝙞𝙣𝙠 𝙐𝙥𝙡𝙤𝙖𝙙𝙚𝙙, 𝘾𝙡𝙞𝙘𝙠 𝘽𝙚𝙡𝙤𝙬 𝘽𝙪𝙩𝙩𝙤𝙣 𝙏𝙤 𝙎𝙚𝙚 𝙁𝙞𝙡𝙚𝙨</b>"
             else:
                 pass
-            sendMarkup(msg + log_m + fwdpm, self.bot, self.message, InlineKeyboardMarkup([[InlineKeyboardButton(text="𝙂𝙚𝙩 𝙔𝙤𝙪𝙧 𝙁𝙞𝙡𝙚𝙨", url=logmsg.link)]]))
+            sendMarkup(msg + fwdpm, self.bot, self.message, InlineKeyboardMarkup([[InlineKeyboardButton(text="𝙂𝙚𝙩 𝙔𝙤𝙪𝙧 𝙁𝙞𝙡𝙚𝙨", url=logmsg.link)]]))
             sendPrivate(msg, self.bot, self.message, InlineKeyboardMarkup(buttons.build_menu(2)))
             if self.seed:
                 if self.isZip:
