@@ -87,7 +87,7 @@ def getHerokuDetails(h_api_key, h_app_name):
         abc += f"<b>├ 🎃 APP USAGE:</b> {get_readable_time(AppQuotaUsed)}\n"
         abc += f"<b>├ 🗑️ OTHER APP:</b> {get_readable_time(OtherAppsUsage)}\n"
         abc += f'<b>│</b>\n'
-        abc += f'<b>╰─《 ☣️ @dipeshmirror ☣️ 》</b>'
+        abc += f'<b>╰─《 ☣️ @FourBitCloud ☣️ 》</b>'
         return abc
     except Exception as g:
         LOGGER.error(g)
@@ -171,9 +171,9 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("😎 Master", "https://t.me/toxytech")
-    buttons.buildbutton("🙋 Mirror Group", "https://t.me/dipeshmirror")
-    buttons.buildbutton("🇮🇳 Support Group", "https://t.me/mirrorsociety")
+    buttons.buildbutton("😎 Master", "https://t.me/bot_2345")
+    buttons.buildbutton("🙋 Mirror Group", "https://t.me/FourBitCloud")
+    buttons.buildbutton("🇮🇳 Support Group", "https://t.me/Mltb_chat_unofficial")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f"""
@@ -248,7 +248,7 @@ def log(update, context):
 
 
 help_string = '''
-<b><a href='https://t.me/dipeshmirror'>ReflecrionMirror</a></b> - The Ultimate Telegram MIrror-Leech Bot to Upload Your File & Link in Google Drive & Telegram
+<b><a href='https://t.me/FourBitCloud'>FourBitCloud Mirror Group</a></b> - The Ultimate Telegram MIrror-Leech Bot to Upload Your File & Link in Google Drive & Telegram
 Choose a help category:
 '''
 
@@ -329,7 +329,7 @@ help_string_telegraph_user = f'''
 '''
 
 help_user = telegraph.create_page(
-    title='😄 ReflecrionMirror Help 😄',
+    title='😄 FourBitCloud Help 😄',
     content=help_string_telegraph_user)["path"]
 
 help_string_telegraph_admin = f'''
@@ -353,7 +353,7 @@ help_string_telegraph_admin = f'''
 '''
 
 help_admin = telegraph.create_page(
-    title='😄 Reflection-Mirror Help',
+    title='😄 FourBitCloud-Mirror Help',
     content=help_string_telegraph_admin)["path"]
 
 def bot_help(update, context):
@@ -454,7 +454,7 @@ def main():
     elif not notifier_dict and AUTHORIZED_CHATS:
         for id_ in AUTHORIZED_CHATS:
             try:
-                bot.sendMessage(id_, "Bot Restarted!", 'HTML')
+                bot.sendMessage(id_, "💥𝐁𝐨𝐭 𝐒𝐭𝐚𝐫𝐭𝐞𝐝❗", 'HTML')
             except Exception as e:
                 LOGGER.error(e)
 
